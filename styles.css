@@ -6,29 +6,23 @@
 }
 
 html, body {
-    height: 100%;  /* Ensure that the html and body tags take up full viewport height */
+    height: 100%; /* Ensure the entire viewport is covered */
 }
 
 body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Layout header, content, footer */
     font-family: 'Times New Roman', serif;
     color: #333;
     background-color: #f4f4f9;
     line-height: 1.6;
-    padding: 20px;
 }
 
-header {
+header, footer {
     background-color: #003366;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
-}
-
-header h1 {
-    margin: 0 0 10px 0;
-    padding: 0 20px;
-    font-size: 24px;
-    text-transform: uppercase;
 }
 
 nav {
@@ -41,6 +35,7 @@ nav {
 
 nav ul {
     list-style-type: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -56,10 +51,7 @@ nav a {
 
 main {
     padding: 20px;
-    padding-bottom: 80px; /* Increased padding-bottom to ensure there's space for the footer */
     background-color: #ffffff;
-    margin-top: 20px;
-    min-height: 80vh; /* This ensures that main takes at least 80% of the viewport height */
 }
 
 section {
@@ -72,16 +64,6 @@ section h2 {
     border-bottom: 2px solid #003366;
     margin-bottom: 10px;
     padding-bottom: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #003366;
-    color: #ffffff;
-    position: sticky;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Style pour les boutons et les liens interactifs */
@@ -109,10 +91,5 @@ button:hover, .button:hover {
 
     header h1 {
         font-size: 20px;
-    }
-
-    .sponsor {
-        flex-direction: column;  /* Stack logo and description vertically on smaller screens */
-        align-items: flex-start;
     }
 }
