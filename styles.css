@@ -66,34 +66,6 @@ section h2 {
     padding-bottom: 5px;
 }
 
-/* Style pour les boutons et les liens interactifs */
-button, .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #666;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover, .button:hover {
-    background-color: #777;
-}
-
-/* Adaptations pour les écrans plus petits */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    header h1 {
-        font-size: 20px;
-    }
-}
-
 /* Sponsors section with flexbox */
 .sponsor-list {
     display: flex;
@@ -132,4 +104,36 @@ button:hover, .button:hover {
         max-width: 200px; /* Limit maximum width */
     }
 }
+
+
+
+/* Style pour les boutons et les liens interactifs */
+button, .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #666;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .button:hover {
+    background-color: #777;
+}
+
+/* Adaptations pour les écrans plus petits */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+}
+
+
 
