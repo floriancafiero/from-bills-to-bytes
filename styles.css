@@ -93,3 +93,43 @@ button:hover, .button:hover {
         font-size: 20px;
     }
 }
+
+/* Sponsors section with flexbox */
+.sponsor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Distribute space between items */
+    margin-bottom: 20px;
+}
+
+.sponsor {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Space between the logo and the description */
+    flex: 1 1 45%; /* Flex grow, shrink and basis set for responsiveness */
+    min-width: 300px; /* Minimum width for each sponsor block */
+    background: #f4f4f9; /* Background color for contrast */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners for aesthetics */
+}
+
+.sponsor img {
+    width: 200px; /* Fixed width for logos */
+    height: auto; /* Maintain aspect ratio */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+@media (max-width: 768px) {
+    .sponsor {
+        flex-direction: column; /* Stack logo and description vertically on smaller screens */
+        align-items: center; /* Center align items for a neat look */
+        flex-basis: 100%; /* Take full width on small screens */
+    }
+
+    .sponsor img {
+        width: 100%; /* Full width on small screens */
+        max-width: 200px; /* Limit maximum width */
+    }
+}
+
