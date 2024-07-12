@@ -1,4 +1,4 @@
-/* Réinitialisation de certains styles par défaut pour une meilleure cohérence */
+/* Resetting some default styles for better consistency across browsers */
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +6,14 @@
 }
 
 html, body {
-    height: 100%; /* Ensure the entire viewport is covered */
+    height: 100%; /* Ensure that the html and body tags take up full viewport height */
+    margin: 0;
 }
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Layout header, content, footer */
+    grid-template-rows: auto 1fr auto; /* Header size, flexible middle content, footer size */
+    min-height: 100vh; /* Ensures the body is at least as tall as the viewport */
     font-family: 'Times New Roman', serif;
     color: #333;
     background-color: #f4f4f9;
@@ -21,8 +23,9 @@ body {
 header, footer {
     background-color: #003366;
     color: #ffffff;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Ensure full width */
 }
 
 nav {
@@ -51,7 +54,10 @@ nav a {
 
 main {
     padding: 20px;
-    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    min-height: 0; /* Reset minimum height to avoid overflow issues */
 }
 
 section {
@@ -64,6 +70,45 @@ section h2 {
     border-bottom: 2px solid #003366;
     margin-bottom: 10px;
     padding-bottom: 5px;
+}
+
+/* Styles for buttons and interactive links */
+button, .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #666;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .button:hover {
+    background-color: #777;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .sponsor {
+        flex-direction: column; /* Stack logo and description vertically on smaller screens */
+        align-items: center; /* Center align items for a neat look */
+        flex-basis: 100%; /* Take full width on small screens */
+    }
+
+    .sponsor img {
+        width: 100%; /* Full width on small screens */
+        max-width: 200px; /* Limit maximum width */
+    }
 }
 
 /* Sponsors section with flexbox */
@@ -104,36 +149,3 @@ section h2 {
         max-width: 200px; /* Limit maximum width */
     }
 }
-
-
-
-/* Style pour les boutons et les liens interactifs */
-button, .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #666;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover, .button:hover {
-    background-color: #777;
-}
-
-/* Adaptations pour les écrans plus petits */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    header h1 {
-        font-size: 20px;
-    }
-}
-
-
-
