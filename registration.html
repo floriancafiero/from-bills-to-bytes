@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | From Bills to Bytes Workshop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Register for the From Bills to Bytes Workshop</h1>
+        <p>Join us to explore the interface between computational analysis and legislative data.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="practical-info.html">Practical Information</a></li>
+            <li><a href="sponsors.html">Our Sponsors</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="registration-form">
+            <h2>Registration Details</h2>
+            <p>Please fill out the form below to register for the workshop. Early bird registration is available until October 15, 2024.</p>
+            <form action="YOUR_SERVER_ENDPOINT" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="affiliation">Affiliation:</label>
+                <input type="text" id="affiliation" name="affiliation">
+                
+                <label for="type">Registration Type:</label>
+                <select id="type" name="type">
+                    <option value="standard">Standard - $200</option>
+                    <option value="student">Student - $100</option>
+                    <option value="early_bird">Early Bird - $150</option>
+                </select>
+                
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 From Bills to Bytes Workshop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
