@@ -1,4 +1,4 @@
-/* Resetting some default styles for better consistency across browsers */
+/* Resetting default styles for better consistency */
 * {
     margin: 0;
     padding: 0;
@@ -7,43 +7,45 @@
 
 html, body {
     height: 100%; /* Ensure that the html and body tags take up full viewport height */
-    margin: 0;
 }
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header size, flexible middle content, footer size */
-    min-height: 100vh; /* Ensures the body is at least as tall as the viewport */
+    grid-template-rows: auto 1fr auto; /* header, content, footer */
+    grid-template-columns: 100%; /* Full width */
+    min-height: 100vh; /* Ensures minimum height of the viewport */
     font-family: 'Times New Roman', serif;
     color: #333;
     background-color: #f4f4f9;
     line-height: 1.6;
 }
 
-header, footer {
+header {
+    grid-column: 1 / -1; /* Full width */
     background-color: #003366;
     color: #ffffff;
-    text-align: center;
     padding: 20px 0;
-    width: 100%; /* Ensure full width */
+    text-align: center;
 }
 
 nav {
+    grid-column: 1 / -1; /* Full width */
     background-color: #555;
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
-    font-size: 16px;
 }
 
 nav ul {
     list-style-type: none;
+    display: flex;
+    justify-content: center;
     padding: 0;
+    margin: 0 auto;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 20px;
 }
 
 nav a {
@@ -53,11 +55,12 @@ nav a {
 }
 
 main {
-    padding: 20px;
+    grid-column: 1 / -1; /* Full width */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
-    min-height: 0; /* Reset minimum height to avoid overflow issues */
+    justify-content: flex-start;
+    padding: 20px;
+    overflow: auto; /* Allows scrolling if content exceeds viewport height */
 }
 
 section {
@@ -70,6 +73,14 @@ section h2 {
     border-bottom: 2px solid #003366;
     margin-bottom: 10px;
     padding-bottom: 5px;
+}
+
+footer {
+    grid-column: 1 / -1; /* Full width */
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
 }
 
 /* Styles for buttons and interactive links */
@@ -100,14 +111,14 @@ button:hover, .button:hover {
     }
 
     .sponsor {
-        flex-direction: column; /* Stack logo and description vertically on smaller screens */
-        align-items: center; /* Center align items for a neat look */
-        flex-basis: 100%; /* Take full width on small screens */
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 100%;
     }
 
     .sponsor img {
-        width: 100%; /* Full width on small screens */
-        max-width: 200px; /* Limit maximum width */
+        width: 100%;
+        max-width: 200px;
     }
 }
 
@@ -116,36 +127,26 @@ button:hover, .button:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between; /* Distribute space between items */
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
 .sponsor {
     display: flex;
-    align-items: center; /* Align items vertically in the center */
-    gap: 20px; /* Space between the logo and the description */
-    flex: 1 1 45%; /* Flex grow, shrink and basis set for responsiveness */
-    min-width: 300px; /* Minimum width for each sponsor block */
-    background: #f4f4f9; /* Background color for contrast */
+    align-items: center;
+    gap: 20px;
+    flex: 1 1 45%;
+    min-width: 300px;
+    background: #f4f4f9;
     padding: 10px;
-    border-radius: 8px; /* Rounded corners for aesthetics */
+    border-radius: 8px;
 }
 
 .sponsor img {
-    width: 200px; /* Fixed width for logos */
-    height: auto; /* Maintain aspect ratio */
-    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
-    .sponsor {
-        flex-direction: column; /* Stack logo and description vertically on smaller screens */
-        align-items: center; /* Center align items for a neat look */
-        flex-basis: 100%; /* Take full width on small screens */
-    }
 
-    .sponsor img {
-        width: 100%; /* Full width on small screens */
-        max-width: 200px; /* Limit maximum width */
-    }
-}
+
