@@ -20,23 +20,15 @@ body {
 
 header {
     width: 100%;
-    background-color: #1A1A1A; /* Changed to dark gray */
+    background-color: #003366;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header img {
-    max-height: 50px; /* Adjust as needed */
-    margin-right: 20px;
 }
 
 nav {
     width: 100%;
-    background-color: #333; /* Changed to a lighter dark gray */
+    background-color: #555;
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
@@ -75,16 +67,16 @@ section {
 }
 
 section h2 {
-    color: #1A1A1A; /* Changed to match header */
+    color: #003366;
     font-size: 20px;
-    border-bottom: 2px solid #1A1A1A; /* Changed to match header */
+    border-bottom: 2px solid #003366;
     margin-bottom: 10px;
     padding-bottom: 5px;
 }
 
 footer {
     width: 100%;
-    background-color: #1A1A1A; /* Changed to match header */
+    background-color: #003366;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
@@ -95,7 +87,7 @@ button, .button {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: #555;
+    background-color: #666;
     color: #fff;
     border: none;
     cursor: pointer;
