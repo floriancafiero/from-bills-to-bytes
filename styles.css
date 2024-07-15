@@ -22,15 +22,16 @@ p, ul, ol, li, div, section, article, aside {
     text-align: justify;
 }
 
-.center-text {
-    text-align: center;
-}
 
 header {
     width: 100%;
     background-color: #003366;
     color: #ffffff;
     padding: 20px 0;
+    text-align: center;
+}
+
+.center-text {
     text-align: center;
 }
 
