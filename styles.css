@@ -9,6 +9,12 @@ html, body {
 }
 
 body {
+p, ul, ol, li, div, section, article, aside {
+    text-align: justify;
+}
+
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
